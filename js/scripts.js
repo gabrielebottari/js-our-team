@@ -50,3 +50,12 @@ const teamMembers = [
       image: "barbara-ramos-graphic-designer.jpg"
     }
   ];
+
+//MILESTONE 1: Stampo su console il nome, ruolo e la stringa della foto per ogni membro del team utilizzando un ciclo for
+for (let i = 0; i < teamMembers.length; i++) {
+
+    console.log("Name: " + teamMembers[i].name);
+    console.log("Role: " + teamMembers[i].role);
+    console.log("Image: " + teamMembers[i].image);
+
+}
