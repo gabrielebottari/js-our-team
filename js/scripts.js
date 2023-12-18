@@ -60,6 +60,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 
 }
 
+/*
 //MILESTONE 2: Stampo sul DOM sottoforma di stringhe utilizzando un ciclo for
 const teamList = document.getElementById("team-list");
 
@@ -72,3 +73,31 @@ for (let i = 0; i < teamMembers.length; i++) {
   teamList.appendChild(memberInfo);
 
 }
+*/
+
+/*
+BONUS 1: Trasformare la stringa foto in una immagine effettiva
+
+BONUS 2: Organizzare i singoli membri in card/schede
+*/
+
+//inizializzo variabile per rappresentare il contenuto delle card
+let teamCard = '';
+
+//ciclo for con array e per ogni i dell'array creo un div con un img nell'ordine corrispondente
+for (let i = 0; i < teamMembers.length; i++) {
+
+    teamCard += 
+    `
+        <div class="card text-center p-0 border-primary-subtle">
+            <img class="card-img-top" src="./img/${teamMembers[i].image}" alt="Image ${i+1}">
+                <div class="card-body">
+                    <h4 class="card-title">${teamMembers[i].name}</h4>
+                    <p class="card-text">${teamMembers[i].role}</p>
+                </div>
+        </div>
+    `; 
+};
+
+//inserisco nell'html il codice js creato con il ciclo for
+const itemsSlider = document.querySelector('.cardTeam').innerHTML = teamCard;
