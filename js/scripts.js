@@ -59,3 +59,16 @@ for (let i = 0; i < teamMembers.length; i++) {
     console.log("Image: " + teamMembers[i].image);
 
 }
+
+//MILESTONE 2: Stampo sul DOM sottoforma di stringhe utilizzando un ciclo for
+const teamList = document.getElementById("team-list");
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+  const memberInfo = document.createElement("p");
+
+  memberInfo.textContent = `Name: ${teamMembers[i].name}, Role: ${teamMembers[i].role}, Image: ${teamMembers[i].image}`;
+
+  teamList.appendChild(memberInfo);
+
+}
